@@ -23,7 +23,12 @@ export default function DisplayUser() {
         {users.map((element) => {
           return (
             <div className="user" key={element.id}>
-              <h4 style={{paddingLeft:'25px' }}>{element.name}</h4>
+              <div className="head">
+                <h4 style={{ paddingLeft: "15px" }}>{element.name}</h4>
+                <button className="btn" style={{ marginTop: "20px" }}>
+                  <strong>+</strong>
+                </button>
+              </div>
               {tickets.map((article) => {                
                 return element.id === article.userId ? (                  
                     <Cards title={article.title} id={article.id} tag={article.tag} />                  

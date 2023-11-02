@@ -18,7 +18,12 @@ export default function DisplayStatus() {
   return (
     <div className="statusContainer">
       <div className="statusContain">
-        <h4 style={{ paddingLeft: "15px" }}>Todo</h4>
+        <div className="head">
+          <h4 style={{ paddingLeft: "15px" }}>To Do</h4>
+          <button className="btn">
+            <strong>+</strong>
+          </button>
+        </div>
         {tickets.map((element) => {
           return element.status === "Todo" ? (
             <Cards title={element.title} id={element.id} tag={element.tag} />
@@ -26,7 +31,12 @@ export default function DisplayStatus() {
         })}
       </div>
       <div className="statusContain">
-        <h4 style={{ paddingLeft: "15px" }}>In Progress</h4>
+        <div className="head">
+          <h4 style={{ paddingLeft: "15px" }}>In Progress</h4>
+          <button className="btn">
+            <strong>+</strong>
+          </button>
+        </div>
         {tickets.map((element) => {
           return element.status === "In progress" ? (
             <Cards title={element.title} id={element.id} tag={element.tag} />
@@ -34,7 +44,12 @@ export default function DisplayStatus() {
         })}
       </div>
       <div className="statusContain">
-        <h4 style={{ paddingLeft: "15px" }}>Done</h4>
+        <div className="head">
+          <h4 style={{ paddingLeft: "15px" }}>Done</h4>
+          <button className="btn">
+            <strong>+</strong>
+          </button>
+        </div>
         {tickets.map((element) => {
           return element.status === "Done" ? (
             <Cards title={element.title} id={element.id} tag={element.tag} />
@@ -42,7 +57,12 @@ export default function DisplayStatus() {
         })}
       </div>
       <div className="statusContain">
-        <h4 style={{paddingLeft: "15px" }}>Backlog</h4>
+        <div className="head">
+          <h4 style={{ paddingLeft: "15px" }}>Backlog</h4>
+          <button className="btn">
+            <strong>+</strong>
+          </button>
+        </div>
         {tickets.map((element) => {
           return element.status === "Backlog" ? (
             <Cards title={element.title} id={element.id} tag={element.tag} />

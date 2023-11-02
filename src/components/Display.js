@@ -28,7 +28,10 @@ export default function Display(props) {
   return (
     <div className="container">
       <div className="contain">
-        <h4 style={{paddingLeft:'25px' }}> ... URGENT</h4>
+        <div className="head">
+          <h4 style={{paddingLeft:'25px' }}>... URGENT</h4>
+          <button className="btn"><strong>+</strong></button>
+        </div>        
         {articles.map((element) => {
           return element.priority === 4 ? (
             <Cards title={element.title} id={element.id} tag={element.tag} check={props.check} toggleCheck={props.toggleCheck}/>
@@ -36,7 +39,10 @@ export default function Display(props) {
         })}
       </div>
       <div className="contain">
-        <h4 style={{paddingLeft:'25px' }}>... High Priority</h4>
+        <div className="head">
+          <h4 style={{paddingLeft:'25px' }}>... High Priority</h4>
+          <button className="btn"><strong>+</strong></button>
+        </div>        
         {articles.map((element) => {
           return element.priority === 3 ? (
             <Cards title={element.title} id={element.id} tag={element.tag} check={props.check} toggleCheck={props.toggleCheck}/>
@@ -44,7 +50,10 @@ export default function Display(props) {
         })}
       </div>
       <div className="contain">
-        <h4 style={{paddingLeft:'25px' }}>... Medium Priority</h4>
+        <div className="head">
+          <h4 style={{paddingLeft:'25px' }}>... Medium Priority</h4>
+          <button className="btn"><strong>+</strong></button>
+        </div>        
         {articles.map((element) => {
           return element.priority === 2 ? (
             <Cards title={element.title} id={element.id} tag={element.tag} check={props.check} toggleCheck={props.toggleCheck}/>
@@ -52,7 +61,10 @@ export default function Display(props) {
         })}
       </div>
       <div className="contain">
+        <div className="head">
           <h4 style={{paddingLeft:'25px' }}>... Low Priority {}</h4>
+          <button className="btn"><strong>+</strong></button>
+        </div>
         {articles.map((element) => {
             return element.priority === 1 ? (
             <Cards title={element.title} id={element.id} tag={element.tag} check={props.check} toggleCheck={props.toggleCheck}/>
@@ -60,7 +72,10 @@ export default function Display(props) {
         })}
       </div>
       <div className="contain">
-        <h4 style={{paddingLeft:'25px' }}>... No Priority</h4>
+        <div className="head">
+          <h4 style={{paddingLeft:'25px' }}>... No Priority</h4>
+          <button className="btn"><strong>+</strong></button>
+        </div>
         {articles.map((element) => {
           return element.priority === 0 ? (
             <Cards title={element.title} id={element.id} tag={element.tag} check={props.check} toggleCheck={props.toggleCheck}/>
